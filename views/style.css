@@ -17,6 +17,8 @@ header {
 header img ,
 header a {
 	margin: 1rem;
+	text-decoration: none;
+	color: black;
 }
 
 .container-ours {

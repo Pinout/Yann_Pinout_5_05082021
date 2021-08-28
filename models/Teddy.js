@@ -1,3 +1,4 @@
+//const mongoose = require('mongoose');
 const teddies = [
   {
     "colors": ["Tan", "Chocolate", "Black", "White"],
@@ -66,3 +67,4 @@ exports.findById = (id) => {
     )
   );
 }
+
