@@ -2,9 +2,14 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data: ; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; default-src 'self' * self blob: data: gap: http://localhost:3000" />
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' http://* ; style-src-elem 'self' http://*  ; script-src 'self' http://* ; default-src 'self' * self blob: data: gap: http://localhost:3000" />
     <meta name="dexcription" content="Orinoco, entreprise de vente de peluches faites main en ligne" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <!--<link  href="https://www.google-analytics.com">   
+    <link  href="https://ssl.gstatic.com">
+    <link  href="https://www.gstatic.com">
+    <link  href="https://www.googletagmanager.com">-->
     <link rel="stylesheet" type="text/css" href="style.css" />
     <base href="/" />
     <title> Orinoco </title>
@@ -15,7 +20,7 @@
     <a href="panier.html"> Panier </a>
 </header>
 
-<main>
+<main id="main">
     <script src="js/index.js"></script>
 </main>
 

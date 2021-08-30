@@ -9,7 +9,7 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	border-color: #9c3759;
+	border-color: rgb(183 116 138);
     border-radius: 2rem;
     border-style: solid;
     align-items: center;
