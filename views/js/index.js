@@ -1,26 +1,3 @@
-/*let container = document.getElementById("container");
-
-class Teddy {
-    constructor({
-        name,
-        imageUrl,
-        price,
-        _id,
-        description,
-        colors,
-        quantity
-    }) {
-        this.name = name;
-        this.imageUrl = imageUrl;
-        this.price = price;
-        this.id = _id;
-        this.description = description;
-        this.colors = colors;
-        this.quantity = parseInt(quantity, 10); // transforme chaine de caractère en nombre
-    }
-};
-*/
-
 //Récupération de l'id pour rediriger vers la page product correspondante
 function getUrlProduct(teddies,i,linkProduct) {
    
@@ -43,14 +20,13 @@ function createButtonLinkProduct(linkProduct) {
     let buttonBuy = document.createElement("button");
     linkProduct.appendChild(buttonBuy);
     buttonBuy.classList.add("btn", "btn-warning", "block-right");
-    // Ajout texte au bouton
-    buttonBuy.textContent = "Voir";
+    buttonBuy.textContent = "Voir plus";
 }
 
 function createCardTeddies(teddies) {
     let divParentParent = document.createElement("div");
-    const mainHome = document.getElementById("main");
-    mainHome.appendChild(divParentParent);
+    const main = document.getElementById("main");
+    main.appendChild(divParentParent);
     divParentParent.classList.add("row-cols-1", "row-cols-md-4", "row-cols-lg-5", "d-flex", "flex-wrap", "justify-content-between", "align-items-between");
 
     for (let i = 0; i < teddies.length; i++) {
@@ -72,12 +48,12 @@ function createCardTeddies(teddies) {
 
 
         // Création des éléments enfants de divCardBody
-        let titleTeddy = document.createElement("h3");
+        let titleTeddy = document.createElement("h4");
         divCardBody.appendChild(titleTeddy);
         titleTeddy.classList.add("card-title", "title");
         titleTeddy.textContent = teddies[i].name;
 
-        let descriptionTeddy = document.createElement("p");
+        let descriptionTeddy = document.createElement("h6");
         divCardBody.appendChild(descriptionTeddy);
         descriptionTeddy.classList.add("description", "text-justify");
         descriptionTeddy.textContent = teddies[i].description;
@@ -89,10 +65,10 @@ function createCardTeddies(teddies) {
         divLinkPrice.classList.add("d-flex", "flex-row", "justify-content-between");
 
         // Prix
-        let priceTeddy = document.createElement("p");
+        let priceTeddy = document.createElement("h6");
         divLinkPrice.appendChild(priceTeddy);
         priceTeddy.classList.add("price", "my-2", "font-weight-bold");
-        priceTeddy.textContent = teddies[i].price + ' $';
+        priceTeddy.textContent = teddies[i].price/100 + ' €';
 
         let linkProduct = document.createElement("a");
         divLinkPrice.appendChild(linkProduct);
@@ -117,41 +93,3 @@ async function getTeddies() {
     }
 }
 getTeddies()
-
-
-/*function convertPrice(productPrice) {
-    let price = `${productPrice}`;
-    price = Intl.NumberFormat("fr-FR", {
-        style: "currency",
-        currency: "EUR",
-        minimumFractionDigits: 2,
-    }).format(price / 100);
-    return price;
-}*/
-/*function addCards(data) {
-    //boucle pour chaque iteration d'un produit
-    for (produit of data) {
-        //recupère l'élément liste dans le HTML
-        const card = document.getElementById("liste");
-        //convertit le prix
-        const price = convertPrice(produit.price);
-        card.innerHTML += `
-      <div class="col-sm-12 col-md-6 col-lg-6 pb-3  ">
-          <div class="card border bg-light shadow p-3 mb-5 bg-body rounded">
-              <div class="card-body">
-                  <div class="row">
-                      <a href="../produit.html?_id=${produit._id}"><img src="${produit.imageUrl}" class="img-fluid img-thumbnail p-1" alt="${produit.name}"></a>
-                      <div class="col-6 col-sm-7 mt-3" >
-                          <h5 class="card-title">${produit.name}</h5>
-                      </div>
-                      <div class="col-6 col-sm-5 text-end mt-3">
-                          <h5 class="card-title">${price}</h5>
-                      </div>
-                  </div>
-                  <p class="card-text text-truncate">${produit.description}</p>
-                  <a href="../produit.html?_id=${produit._id}" class="btn btn-secondary">Acheter ce produit</a>
-              </div>
-          </div>
-      </div>`;
-    }
-}*/

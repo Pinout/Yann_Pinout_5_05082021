@@ -8,16 +8,27 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <base href="/" />
-    <title> Orinoco </title>
+    <title> Confirmation </title>
 </head>
 
 <header>
     <img src="images/logo.png" alt="Logo du site web Orinoco (petit chariot avec nom du site à droite)" />
-    <a href="panier.html"> Panier </a>
+    <a href="index.html"> Panier </a>
 </header>
 
 <main id="main">
-    <script src="js/index.js"></script>
+        <div class="border border-warning rounded shadow-lg my-5 py-2 text-center">
+            <p id="orderId"></p>
+            <p id="total-price"></p>
+            <p><span class="title-product"> Au revoir !</span> </p>
+            <button href="../index.html" class="btn btn-warning" id="btn-confirmation"> Retour à l'accueil </button>
+        </div>
+
+
+
+
+
+    <script src="js/confirmation.js"></script>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

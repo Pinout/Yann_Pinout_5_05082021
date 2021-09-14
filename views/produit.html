@@ -2,7 +2,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data: ; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; default-src 'self' * self blob: data: gap: http://localhost:3000" />
+      <meta http-equiv="Content-Security-Policy" content="img-src * data: blob: 'unsafe-inline' ; style-src-elem 'self' http://*  ; script-src 'self' http://* ; default-src * data: blob: 'unsafe-inline'" />
     <meta name="dexcription" content="Orinoco, entreprise de vente de peluches faites main en ligne" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -12,11 +12,14 @@
 
 <header>
     <img src="images/logo.png" alt="Logo du site web Orinoco (petit chariot avec nom du site à droite)" />
-    <a href="index.html"> Accueil </a>
+    <div style="display: flex;">
+        <a href="panier.html"> Panier </a>
+        <a href="index.html"> Accueil </a>
+    </div>
 </header>
 
-<main>
-    <script src="js/index.js"></script>
+<main id="main">
+    <script src="js/produit.js"></script>
 </main>
 
 
