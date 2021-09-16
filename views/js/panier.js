@@ -33,6 +33,14 @@ function createBasket(itemTeddy, basketContent) {
     divBasket.classList.add('basketContentToClear');
     divBasket.classList.add("d-flex", "flex-row", "justify-content-between", "my-2", "px-1", "bold");
 
+    // Photos
+    let imageTeddy = document.createElement("img");
+    imageTeddy.id = cpt.toString();
+    imageTeddy.className="imagesPanier";
+    imageTeddy.classList.add("card-image-top", "photo");
+    document.getElementById("image").appendChild(imageTeddy);
+    imageTeddy.src = itemTeddy.imageUrl;
+
     // Noms
     let nameTeddy = document.createElement('p');
     nameTeddy.id = cpt.toString();
@@ -135,6 +143,7 @@ function deleteOne() {
         window.location.assign("../panier.html"); // Recharge la page
 
         // Supprime les éléments dans le html
+        document.getElementById(buttonSuppr.id).remove();
         document.getElementById(buttonSuppr.id).remove();
         document.getElementById(buttonSuppr.id).remove();
         document.getElementById(buttonSuppr.id).remove();

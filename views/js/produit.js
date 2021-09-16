@@ -36,7 +36,7 @@ function createCardTeddy(choosenTeddy, idTeddy) {
     let imageTeddy = document.createElement("img");
     imageTeddy.className="imageProduit";
     divParent.appendChild(imageTeddy);
-    imageTeddy.classList.add("card-image-top", "photo", "img-fluid");
+    imageTeddy.classList.add("card-image-top", "photo", "img-fluid", "imgProduct");
     imageTeddy.src = choosenTeddy.imageUrl;
 
     let divCardBody = document.createElement("div");

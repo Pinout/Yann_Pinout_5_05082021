@@ -6,6 +6,7 @@ body {
 	margin: 1rem;
 	background-color: #f2e8f0;
 }
+
 header {
 	display: flex;
 	flex-direction: row;
@@ -21,9 +22,24 @@ header a {
 	text-decoration: none;
 	color: black;
 }
+.head {
+	display: flex;
+}
+
 .img-fluid {
     height: 10rem;
 }
+
+#image {
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+}
+.imagesPanier {
+	width: 4rem;
+	height: 3rem;
+}
+
 .btn-warning,
 .form-control {
 	background-color: #ffeaab; /* jaune */
@@ -38,23 +54,35 @@ header a {
 	height: 30rem;
 }
 
-h3 { color: black; }
+h3 { 
+	color: black;
+}
 label,
 p {
 	color: rgb(183 116 138); /* violet */
+	font-size: 1.5rem;
 }
-
-
-
-
 
 .form-row {
 	flex-direction: column;
 }
 
-
 @media (max-width: 770px) {
 	.img-fluid {
     	height: 20rem;
+	}
+	.imgProduct {
+	height: 10rem !important;
+	}
+}
+@media (max-width: 525px) {
+	.head {
+		flex-wrap: wrap;
+	}
+	p  { font-size: 0.7rem;   }
+	h3 { font-size: 1.5rem; }
+	.imagesPanier {
+    	width: 3rem;
+    	height: 2rem;
 	}
 }
