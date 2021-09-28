@@ -50,9 +50,10 @@ function addConfirmationOrder() {
 function resetOrder() {
     buttonHome = document.getElementById('btn-confirmation');
     buttonHome.addEventListener('click', function () {
-        localStorage.removeItem("orderConfirmationId");
-        localStorage.removeItem('basketContent');
-        localStorage.removeItem('totalOrder');
+        //localStorage.removeItem("orderConfirmationId");
+        //localStorage.removeItem('basketContent');
+        //localStorage.removeItem('totalOrder');
+        localStorage.clear()
         window.location.href = "../index.html";
     })
 }

@@ -24,6 +24,25 @@ header a {
 }
 .head {
 	display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.paniers{
+	display: flex;
+	flex-direction: row;
+}
+#icone {
+    font-size: 1rem;
+}
+.icone {
+	left: 95% !important;
+	top: 4% !important;
+}
+.iconePanier {
+	width: 4rem;
+    height: 3rem;
+    margin: 0;
 }
 
 .img-fluid {
@@ -85,4 +104,23 @@ p {
     	width: 3rem;
     	height: 2rem;
 	}
+@media (max-width: 330px) {
+	.iconePanier {
+		width: 3.3rem;
+		height: 2.3rem;
+	}
+}
+@media (max-width: 370px) {
+	.imagesPanier {
+    	width: 2rem;
+    	height: 1rem;
+	}
+	p {
+    	font-size: 0.5rem;
+	}
+	h3 {
+		font-size: 0.8rem;
+	}
+}
+
 }

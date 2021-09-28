@@ -1,4 +1,4 @@
-// Tableau des prix
+        // Tableau des prix
 const arrayPrice = [];
 // Tableau d'id de teddies
 let products = [];
@@ -175,8 +175,6 @@ function deleteBasket() {
     buttonClearBasket.textContent = "Vider mon panier";
 
     buttonClearBasket.addEventListener('click', function () {
-        //localStorage.removeItem('basketContent');
-        //localStorage.removeItem('totalOrder');
         localStorage.clear();
         let mainBasket = document.getElementById('basket-content');
         while (mainBasket.firstChild) {
@@ -226,7 +224,7 @@ async function postForm(dataToSend) {
 }
 
 
-//Validation commande et envoi de contact{} et de product[] à l'API
+//Validation commande et envoi de contact{} et de products[] à l'API
 function confirmationOrder() {
         getForm();
         dataToSend = JSON.stringify({ contact, products });

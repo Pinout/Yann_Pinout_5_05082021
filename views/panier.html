@@ -12,7 +12,13 @@
 
 <header>
     <img src="images/logo.png" alt="Logo du site web Orinoco (petit chariot avec nom du site à droite)" />
-    <a href="index.html"> Accueil </a>
+    <div class="head">
+        <a href="index.html"> Accueil </a>
+        <a href="panier.html" class="paniers">
+            <img src = "../images/panier.png" class="iconePanier" > </img>
+            <p id="icone" class="icone"> </p> 
+        </a>
+    </div>
 </header>
 
 <main id="main">
@@ -88,9 +94,10 @@
             <button  class="btn btn-warning block-right" id="btn-validation"> Valider la commande</button>
         </div>
         
-    </main>
+</main>
 
     <script src="js/panier.js"></script>
+    <script src="js/panier-icône.js"></script>
 </main>
 
 
