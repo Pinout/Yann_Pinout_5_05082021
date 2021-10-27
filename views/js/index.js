@@ -1,10 +1,9 @@
 //Récupération de l'id pour rediriger vers la page product correspondante
 function getUrlProduct(teddies,i,linkProduct) {
    
-    // récupération de l'url
+    // Récupération de l'url
     let splitUrl = window.location.pathname.split("/");
     let lastItem = splitUrl.pop();
-    // console.log(window.location.pathname.replace(lastItem, 'product.html'))
     let url = window.location.origin + window.location.pathname.replace(lastItem, '../produit.html');
 
     // // Création d'un objet url
@@ -36,7 +35,7 @@ function createCardTeddies(teddies) {
         divParent.classList.add("card", "col", "m-3", "pt-3");
         divParent.style.backgroundColor="rgb(183 116 138)";
 
-        // Création des élements images et div avec la classe card body, enfants de divParent 
+        // Création des élements image et div avec la classe card body, enfants de divParent 
         let imageTeddy = document.createElement("img");
         divParent.appendChild(imageTeddy);
         imageTeddy.classList.add("card-image-top", "photo", "img-fluid");

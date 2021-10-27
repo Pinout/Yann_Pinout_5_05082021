@@ -226,16 +226,16 @@ async function postForm(dataToSend) {
 
 //Validation commande et envoi de contact{} et de products[] à l'API
 function confirmationOrder() {
-        getForm();
-        dataToSend = JSON.stringify({ contact, products });
-        console.log(dataToSend);
-        postForm(dataToSend);
+    getForm();
+    dataToSend = JSON.stringify({ contact, products });
+    console.log(dataToSend);
+    postForm(dataToSend);
 }
 
 // Validation formulaire
 function validationForm() {
     let buttonValidation = document.getElementById('btn-validation');
-     buttonValidation.addEventListener('click', function () {
+    buttonValidation.addEventListener('click', function () {
         for (i=0; i<products.length; i++) {
             if (products[i] == null) {
                 products.splice(i,1);
@@ -254,7 +254,7 @@ function validationForm() {
             alert("Saisissez TOUS les champs ou entrez un mail valide");
             return false;
         }
-})
+    })
 }
 
 console.log(localStorage);

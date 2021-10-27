@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-//const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 
@@ -11,14 +10,6 @@ const furnitureRoutes = require('./routes/furniture');
 const Teddy = require('./models/Teddy');
 
 const app = express();
- 
-
-
-/*mongoose.connect('mongodb+srv://Yann:H1MJOutHwLM9lluQ@cluster0.ayvcw.mongodb.net/Cluster0?retryWrites=true&w=majority',
-  { useNewUrlParser: true,
-    useUnifiedTopology: true })
-  .then(() => console.log('Connexion à MongoDB réussie !'))
-  .catch(() => console.log('Connexion à MongoDB échouée !'));*/
 
 app.set('view engine', 'html');
 
@@ -26,11 +17,6 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-  //res.set("Content-Security-Policy", "default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;");
-  /*res.setHeader(
-    'Content-Security-Policy-Report-Only',
-    " font-src 'self'; img-src 'self' data: ; script-src 'self' data: ; style-src-elem 'self' data: ; style-src 'self' data: ; frame-src 'self';"
-  );*/
   next();
 });
 

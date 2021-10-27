@@ -113,6 +113,7 @@ function getTeddyColor(buttonBuy, idTeddy) {
         let product = new Product(idTeddy, selectedColors);
         basketContent.push(product);
         localStorage.setItem("basketContent", JSON.stringify(basketContent));
+        window.location.assign("../produit.html?id=" + idTeddy);
     })
 }
 
